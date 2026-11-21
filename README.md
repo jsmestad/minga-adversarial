@@ -26,7 +26,7 @@ extension :minga_adversarial, git: "https://github.com/jsmestad/minga-adverseria
 
 ## Develop
 
-Use the Elixir and OTP versions in `.tool-versions`. You do not need an editor checkout to run the standalone checks. The SDK dependency must include `MingaEditor.Extension.EditorAPI.notice/2` and `Minga.Config.get_extension_option/2`.
+Use the Elixir and Erlang/OTP versions in the [CI workflow](.github/workflows/ci.yml). You do not need an editor checkout to run the standalone checks. The SDK dependency must include `MingaEditor.Extension.EditorAPI.notice/2` and `Minga.Config.get_extension_option/2`.
 
 ```sh
 export MIX_ENV=test
