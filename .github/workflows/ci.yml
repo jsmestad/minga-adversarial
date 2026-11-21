@@ -24,7 +24,8 @@ jobs:
           path: extension
       - uses: erlef/setup-beam@v1
         with:
-          version-file: extension/.tool-versions
+          otp-version: '29.1.2'
+          elixir-version: '1.20.5-otp-29'
           version-type: strict
       - run: mix deps.get
       - run: mix format --check-formatted
