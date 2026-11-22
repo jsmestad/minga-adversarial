@@ -12,7 +12,12 @@ defmodule MingaAdversarial.MixProject do
       start_permanent: false,
       deps: deps(),
       description: "Adversarial pair programmer: challenges the assumptions in your code",
-      source_url: @source_url
+      source_url: @source_url,
+      package: [
+        licenses: ["MIT"],
+        links: %{"GitHub" => @source_url},
+        files: ~w(lib mix.exs README.md LICENSE)
+      ]
     ]
   end
 
@@ -22,7 +27,7 @@ defmodule MingaAdversarial.MixProject do
 
   defp deps do
     [
-      {:minga_sdk, "~> 0.1", only: [:dev, :test], runtime: false},
+      {:minga_sdk, "~> 0.1.1", only: [:dev, :test], runtime: false},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
