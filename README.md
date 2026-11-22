@@ -7,7 +7,7 @@ Challenge the assumptions in the current file and see the model’s findings as 
 Use a Minga build that supports the public extension notice and option APIs. Add this line to `~/.config/minga/config.exs` below your existing `use Minga.Config`, then restart Minga and confirm the install:
 
 ```elixir
-extension :minga_adversarial, git: "https://github.com/jsmestad/minga-adverserial"
+extension :minga_adversarial, git: "https://github.com/jsmestad/minga-adversarial"
 ```
 
 Press `SPC a A` or run `M-x adversarial-analyze` to review the current file. A review sends the current buffer, including unsaved edits, to your configured Minga model. Run `M-x adversarial-clear` to dismiss the findings.
@@ -15,7 +15,7 @@ Press `SPC a A` or run `M-x adversarial-analyze` to review the current file. A r
 The default skepticism level, `:manual`, only runs a review when you ask. Choose another default in the same extension declaration:
 
 ```elixir
-extension :minga_adversarial, git: "https://github.com/jsmestad/minga-adverserial", skepticism: :on_save
+extension :minga_adversarial, git: "https://github.com/jsmestad/minga-adversarial", skepticism: :on_save
 ```
 
 - `:off` disables analysis, including the manual command.
