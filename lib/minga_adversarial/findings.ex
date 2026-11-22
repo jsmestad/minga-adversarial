@@ -3,7 +3,7 @@ defmodule MingaAdversarial.Findings do
   Parses the model's reply into findings the diagnostics SDK can publish.
 
   The model is asked for a strict JSON array of `{"line", "concern"}`, but
-  models wander: they wrap output in prose or ```json fences. This parser is
+  models sometimes wrap their output in prose or fenced JSON blocks. This parser is
   deliberately tolerant (it extracts the outermost JSON array and drops
   anything malformed) and never raises. A bad reply yields `[]`, which is
   treated as "no findings" (and clears stale ones).
